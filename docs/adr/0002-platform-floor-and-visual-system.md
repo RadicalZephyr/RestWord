@@ -1,4 +1,4 @@
-# ADR 0006: Platform floor and visual system
+# ADR 0002: Platform floor and visual system
 
 **Status:** Draft
 
@@ -72,7 +72,7 @@ mockup.
 | `accentActive` | `#79B0D8` Twilight Blue | `#2B6BAB` Twilight Blue |
 | `accentWarm` | `#D19FAB` Dusk Rose | `#C05972` Dusk Rose |
 
-`accentWarm` is reserved. It marks the widget identify flash described in ADR 0007 and nothing
+`accentWarm` is reserved. It marks the widget identify flash described in ADR 0005 and nothing
 else; if a second use appears, that is the signal to argue about it rather than to reach for it.
 
 ### Dark by default
@@ -100,7 +100,7 @@ surface that is always visible.
 
 **minSdk 31.** Reconfiguration and grid-cell sizing for free, no `tools:targetApi`, no
 in-app widget settings surface to build. Rejected on reach: seventeen points, concentrated
-exactly among the people the project set out to be kind to. ADR 0007 gets us reconfiguration
+exactly among the people the project set out to be kind to. ADR 0005 gets us reconfiguration
 without it, and better.
 
 **Material You dynamic colour.** Free, familiar, and it makes the app feel native to each
@@ -135,10 +135,10 @@ it, that is a bug in this document or in the code, and one of them is wrong.
 it does. Verify before building on it; if it fails, the choice is a system font on the widget or
 a rethink of the type system.
 
-**Is the ten-child Glance container ceiling real, and is it ten?** Inherited from ADR 0005 and
+**Is the ten-child Glance container ceiling real, and is it ten?** Inherited from ADR 0004 and
 still unmeasured.
 
-**What does the page title look like on the widget?** ADR 0005 has it replacing "App List N" as
+**What does the page title look like on the widget?** ADR 0004 has it replacing "App List N" as
 a toggleable label, and it is now also the tap target for configuring that widget. It is
 competing with group headings for the same attention, and that is a drawing problem rather than
 a writing one.

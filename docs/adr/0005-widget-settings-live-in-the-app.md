@@ -1,4 +1,4 @@
-# ADR 0007: Widget settings live in the app
+# ADR 0005: Widget settings live in the app
 
 **Status:** Draft
 
@@ -10,7 +10,7 @@ edited in the app.
 
 The conventional home for per-widget settings is the configuration activity, launched by the
 host when a widget is dropped. Reaching it again afterwards depends on
-`WIDGET_FEATURE_RECONFIGURABLE`, which is API 31, and we target 26 (ADR 0006). On a pre-31
+`WIDGET_FEATURE_RECONFIGURABLE`, which is API 31, and we target 26 (ADR 0002). On a pre-31
 device those two settings would be chosen once, in a modal thrown up mid-drag, and then frozen
 for the life of the widget.
 
@@ -48,7 +48,7 @@ modal the system throws up in the middle of a drag, with no room and no second c
 no longer the only way back.
 
 **The launcher's reconfigure affordance stays declared** — `widgetFeatures="reconfigurable"`,
-per ADR 0006 — so people on API 31 and above who reach for the pencil get what they expect. It
+per ADR 0002 — so people on API 31 and above who reach for the pencil get what they expect. It
 is a courtesy on top of the real mechanism, not the mechanism.
 
 **In the list, rows are labelled with what is already meaningful**: page title and font size,
@@ -57,7 +57,7 @@ the approximate size from `getAppWidgetOptions` disambiguates them weakly.
 
 **Tapping a row flashes that widget.** The row's widget re-renders in `accentWarm` for a couple
 of seconds so the person can look at their home screen and see which one answered, then reverts.
-This is the reserved use of Dusk Rose from ADR 0006. It is the same idea as "identify this
+This is the reserved use of Dusk Rose from ADR 0002. It is the same idea as "identify this
 display" in monitor settings.
 
 ## Alternatives considered
@@ -76,7 +76,7 @@ the same job without the artefact.
 
 **Require API 31 and use the launcher's reconfigure flow.** No second surface to build, one
 entry point, the design's "used identically on day one and day one hundred" intact. Rejected on
-reach (ADR 0006) and on reliability, above.
+reach (ADR 0002) and on reliability, above.
 
 **Put per-widget settings on the page editor** — show which widgets use this page and edit their
 font size there. Keeps the surface count down. Rejected because it inverts the relationship: a
@@ -98,7 +98,7 @@ title nor the approximate size separates them and only the flash does. Acceptabl
 watching if anyone ever reports it.
 
 Tapping the page title to configure means the title has to be shown. A widget with its page
-title hidden — which ADR 0005 allows — has no tap affordance and can only be reached from the
+title hidden — which ADR 0004 allows — has no tap affordance and can only be reached from the
 app. That is a defensible consequence of choosing minimalism, but it should be a stated
 consequence rather than a surprise.
 

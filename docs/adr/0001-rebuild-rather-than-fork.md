@@ -1,4 +1,4 @@
-# ADR 0004: Rebuild rather than fork
+# ADR 0001: Rebuild rather than fork
 
 **Status:** Draft
 

@@ -1,8 +1,8 @@
-# ADR 0005: Groups, ordering and page identity
+# ADR 0004: Groups, ordering and page identity
 
 **Status:** Draft. Group titles render on the home screen — the dusk palette document draws
 them as uppercase Medium headings above each block, which settles what was an open question
-here. Per-widget settings moved to ADR 0007.
+here. Per-widget settings moved to ADR 0005.
 
 ## Context
 
@@ -92,7 +92,7 @@ explain.
 The widget configuration screen picks a page by title from a list, not by typing a number. That
 retires "App Display Number" and the entire class of bug around it. It does the minimum at drop
 time — choose a page, or create one — and everything richer lives in the app, where there is
-room for it and where it is reachable again afterwards. See ADR 0007.
+room for it and where it is reachable again afterwards. See ADR 0005.
 
 Tapping a widget's page title opens that widget's settings in the app. This is the main route
 back to a placed widget, and it works on every platform version. The launcher's own reconfigure
