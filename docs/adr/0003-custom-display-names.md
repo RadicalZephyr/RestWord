@@ -47,7 +47,7 @@ splits pages the same way.
 Today the label comes from the system, so this is rare. The moment a text field is pointed at
 it, `|` and `++` become things a person can reasonably type.
 
-### Interaction with ADR 0002
+### Interaction with the configuration screen crash
 
 The point of this feature is shorter names, and the configuration screen crashes on
 `substring(0, 20)` precisely when a page's joined labels are *shorter* than twenty characters.
@@ -116,8 +116,8 @@ an app with nine source files. Not worth it. Room or DataStore are further past 
 **Rename inline in the app-selection list.** One screen instead of two. Rejected because that
 list is already a hundred-plus rows of checkbox and label, an edit affordance on every row
 would dominate it, and — the deciding argument — that is the exact screen whose black-on-black
-rendering we cannot yet explain (ADR 0001). Adding complexity to a screen we do not currently
-understand is a bad trade.
+rendering we cannot yet explain. Adding complexity to a screen we do not currently understand is
+a bad trade.
 
 **Rename by tapping a name on the main screen's page card.** Fewest screens, and the name is
 edited where it is displayed. Rejected on discoverability: nothing indicates the text is

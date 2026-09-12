@@ -76,14 +76,15 @@ The hardest part of ADR 0003 disappears. There is no legacy delimited format to 
 second preferences key, and no rollback window to reason about. Groups, ordering and custom
 names get designed into the model instead of bolted onto one that cannot hold them.
 
-ADR 0002 splits. Its Simple half is moot — we will not write the crash in the first place. Its
-Lawnchair half is unchanged and is still worth landing.
+The widget-configuration record left in the Simple fork splits. Its Simple half is moot — we
+will not write the crash in the first place. Its Lawnchair half is unchanged and is still worth
+landing.
 
 **The unexplained bug follows us.** We never established why the app-selection screen renders
 black on black on a stock Pixel. A rewrite does not fix an unknown cause; if it is something
 about Compose, dynamic colour and that device, we can reproduce it perfectly in new code. The
-observations listed in ADR 0001 matter more now than they did, because we are choosing the
-theming approach from scratch rather than patching one.
+observations listed in the theming record left in the Simple fork matter more now than they did,
+because we are choosing the theming approach from scratch rather than patching one.
 
 We have read the original closely, so some discipline is warranted even though the expression
 worth protecting in a six-hundred-line utility is thin. Concretely: a different application id,
